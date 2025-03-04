@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - College</title>
+    <link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Contact Us</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'administration' %}">Administration</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'departments' %}">Departments</a>
+            <a href="{% url 'placements' %}">Placements</a>
+            <a href="{% url 'amenities' %}">Amenities</a>
+            <a href="{% url 'activities' %}">Activities</a>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Our Address</h2>
+            <p>Garividi (Cheepurupalli), Vizianagaram District, Andhra Pradesh, India.</p>
+            
+            <h2>Email</h2>
+            <p><a href="mailto:sttheressa99@gmail.com">sttheressa99@gmail.com</a></p>
+            
+            <h2>Phone</h2>
+            <p>+91-9704755549, 7893433345</p>
+            <p>+91-08952-281062, 281061</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

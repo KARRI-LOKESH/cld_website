@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration | College Website</title>
+    <link rel="stylesheet" href="{% static 'main/css/administration.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">College Administration</h1>
+    </header>
+
+    <div class="admin-container">
+        <section class="admin-card">
+            <img src="{% static 'main/images/dean.jpg' %}" alt="Dean">
+            <h2>Sri. M. Srinivasa Rao Garu</h2>
+            <p>Founder</p>
+            <p>"Striving for academic excellence and student success."</p>
+        </section>
+        <section class="admin-card">
+            <img src="{% static 'main/images/pricipal.jpg' %}" alt="Principal">
+            <h2>Dr.V.Joshua Jaya Prasad.</h2>
+            <p>Principal</p>
+            <p>"Education is not the filling of vessel, but kindling of light in the students life"</p>
+        </section>
+
+        <section class="admin-card">
+            <img src="{% static 'main/images/eeehod.jpg' %}" alt="HOD">
+            <h2>Mr. B. Venkata Ramana</h2>
+            <p>HOD - Electrical & Electronic Engineering</p>
+            <p>"Empowering students with knowledge and practical skills."</p>
+        </section>
+    </div>
+
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'admissions' %}">Admissions</a>
+        <a href="{% url 'departments' %}">Departments</a>
+        <a href="{% url 'placements' %}">Placements</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+
+</body>
+</html>

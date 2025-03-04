@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'administration' %}">Administration</a>
+        <a href="{% url 'admissions' %}">Admissions</a>
+        <a href="{% url 'departments' %}">Departments</a>
+        <a href="{% url 'placements' %}">Placements</a>
+        <a href="{% url 'research' %}">Research</a>
+        <a href="{% url 'amenities' %}">Amenities</a>
+        <a href="{% url 'activities' %}">Activities</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

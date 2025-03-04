@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities - College</title>
+    <link rel="stylesheet" href="{% static 'main/css/amenities.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Campus Amenities</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'administration' %}">Administration</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'departments' %}">Departments</a>
+            <a href="{% url 'placements' %}">Placements</a>
+            <a href="{% url 'activities' %}">Activities</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <p>Our college provides world-class amenities to ensure students' overall development and comfort.</p>
+    </section>
+
+    <section class="facilities">
+        <div class="facility">
+            <img src="{% static 'main/images/lib.jpg' %}" alt="Library">
+            <h2>Library</h2>
+            <p>A well-stocked library with digital resources, journals, and research materials.</p>
+        </div>
+
+        <div class="facility">
+            <img src="{% static 'main/images/sports.jpg' %}" alt="Sports">
+            <h2>Sports Complex</h2>
+            <p>Indoor and outdoor sports facilities including basketball, football, and gymnasium.</p>
+        </div>
+
+        <div class="facility">
+            <img src="{% static 'main/images/labs.jpg' %}" alt="Labs">
+            <h2>Laboratories</h2>
+            <p>State-of-the-art labs for computer science, biotechnology, and engineering disciplines.</p>
+        </div>
+
+        <div class="facility">
+            <img src="{% static 'main/images/hostel.jpg' %}" alt="Hostel">
+            <h2>Hostel & Accommodation</h2>
+            <p>Safe and comfortable hostels with modern facilities for students.</p>
+        </div>
+
+        <div class="facility">
+            <img src="{% static 'main/images/cafetaria.jpg' %}" alt="Cafeteria">
+            <h2>Cafeteria</h2>
+            <p>Hygienic and multi-cuisine food options available for students and staff.</p>
+        </div>
+
+        <div class="facility">
+            <img src="{% static 'main/images/auditorium.jpg' %}" alt="Auditorium">
+            <h2>Auditorium</h2>
+            <p>A spacious and modern auditorium for events, seminars, and cultural programs.</p>
+        </div>
+    </section>
+
+</body>
+</html>

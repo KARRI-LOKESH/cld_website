@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements - College</title>
+    <link rel="stylesheet" href="{% static 'main/css/placements.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Campus Placements</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'administration' %}">Administration</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'departments' %}">Departments</a>
+            <a href="{% url 'placements' %}">Placements</a>
+            <a href="{% url 'amenities' %}">Amenities</a>
+            <a href="{% url 'activities' %}">Activities</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="placement-container">
+        <h2>Our Top Recruiters</h2>
+        <div class="recruiters">
+            <img src="{% static 'main/images/tcs.png' %}" alt="TCS">
+            <img src="{% static 'main/images/infosys.png' %}" alt="Infosys">
+            <img src="{% static 'main/images/wipro.png' %}" alt="Wipro">
+            <img src="{% static 'main/images/cognizant.png' %}" alt="Cognizant">
+        </div>
+
+        <h2>Placement Statistics</h2>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Total Students</th>
+                <th>Placed Students</th>
+                <th>Highest Package</th>
+                <th>Average Package</th>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>500</td>
+                <td>450</td>
+                <td>16 LPA</td>
+                <td>6.5 LPA</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>480</td>
+                <td>420</td>
+                <td>12 LPA</td>
+                <td>5 LPA</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>470</td>
+                <td>400</td>
+                <td>9 LPA</td>
+                <td>4 LPA</td>
+            </tr>
+        </table>
+
+        <h2>Alumni Success Stories</h2>
+        <div class="alumni-container">
+            <div class="alumni-card">
+                <img src="{% static 'main/images/emir.jpg' %}" alt="Alumni 1">
+                <h3>Karri Lokesh</h3>
+                <p>Software Engineer at Google</p>
+            </div>
+            <div class="alumni-card">
+                <img src="{% static 'main/images/gana.jpg' %}" alt="Alumni 2">
+                <h3>Chinta Ganapathi</h3>
+                <p>Data Scientist at Amazon</p>
+            </div>
+            <div class="alumni-card">
+                <img src="{% static 'main/images/abhi.jpg' %}" alt="Alumni 3">
+                <h3>Balla Abhishek</h3>
+                <p>Product Manager at Microsoft</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

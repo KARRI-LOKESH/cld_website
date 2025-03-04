@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activities - College</title>
+    <link rel="stylesheet" href="{% static 'main/css/activities.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Student Activities & Events</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'administration' %}">Administration</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'departments' %}">Departments</a>
+            <a href="{% url 'placements' %}">Placements</a>
+            <a href="{% url 'amenities' %}">Amenities</a>
+            <a href="{% url 'activities' %}">Activities</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="activities-container">
+        <h2>Clubs & Societies</h2>
+        <div class="clubs">
+            <div class="club-card">
+                <img src="{% static 'main/images/robotics_club.jpg' %}" alt="Robotics Club">
+                <h3>Robotics Club</h3>
+                <p>Innovate and build AI-driven robots with expert mentorship.</p>
+            </div>
+            <div class="club-card">
+                <img src="{% static 'main/images/coding_club.jpg' %}" alt="Coding Club">
+                <h3>Coding Club</h3>
+                <p>Participate in hackathons and coding competitions worldwide.</p>
+            </div>
+            <div class="club-card">
+                <img src="{% static 'main/images/cultural_club.jpg' %}" alt="Cultural Club">
+                <h3>Cultural Club</h3>
+                <p>Express your talent in dance, drama, and music festivals.</p>
+            </div>
+        </div>
+
+        <h2>Annual College Fest</h2>
+        <div class="fest">
+            <img src="{% static 'main/images/fest.jpg' %}" alt="College Fest">
+            <p>Our annual fest is packed with fun, tech events, and cultural activities. Join us for an unforgettable experience!</p>
+        </div>
+
+        <h2>Sports & Athletics</h2>
+        <div class="sports-container">
+            <div class="sport-card">
+                <img src="{% static 'main/images/football.jpg' %}" alt="Football">
+                <h3>Football Team</h3>
+                <p>Train with the best and compete in national tournaments.</p>
+            </div>
+            <div class="sport-card">
+                <img src="{% static 'main/images/basketball.jpg' %}" alt="Basketball">
+                <h3>Basketball Team</h3>
+                <p>Join our winning squad and represent the college.</p>
+            </div>
+            <div class="sport-card">
+                <img src="{% static 'main/images/63311.jpg' %}" alt="Cricket">
+                <h3>Cricket Club</h3>
+                <p>Play for the college and participate in inter-college leagues.</p>
+            </div>
+        </div>
+
+        <h2>Workshops & Guest Lectures</h2>
+        <div class="workshop">
+            <img src="{% static 'main/images/workshop_cse.jpg' %}" alt="Workshop">
+            <p>Enhance your skills with expert-led workshops and guest lectures on trending technologies.</p>
+        </div>
+    </section>
+
+</body>
+</html>

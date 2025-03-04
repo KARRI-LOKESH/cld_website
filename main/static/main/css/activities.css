@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* Club Section */
+.clubs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.club-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.club-card:hover {
+    transform: scale(1.05);
+}
+
+.club-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Fest Section */
+.fest {
+    margin: 30px auto;
+    width: 80%;
+}
+
+.fest img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Sports Section */
+.sports-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.sport-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sport-card:hover {
+    transform: scale(1.05);
+}
+
+.sport-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Workshop Section */
+.workshop {
+    margin: 30px auto;
+    width: 80%;
+}
+
+.workshop img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .clubs, .sports-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fest, .workshop {
+        width: 90%;
+    }
+}

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments - College</title>
+    <link rel="stylesheet" href="{% static 'main/css/departments.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Our Departments</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'administration' %}">Administration</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'departments' %}">Departments</a>
+            <a href="{% url 'placements' %}">Placements</a>
+            <a href="{% url 'amenities' %}">Amenities</a>
+            <a href="{% url 'activities' %}">Activities</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="department-container">
+        <div class="department-card">
+            <img src="{% static 'main/images/computer_science.jpg' %}" alt="CSE">
+            <h2>Computer Science & Engineering</h2>
+            <p>Learn cutting-edge technology, AI, and software development.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="{% static 'main/images/ece.jpg' %}" alt="ECE">
+            <h2>Electronics & Communication Engineering</h2>
+            <p>Explore circuits, communication, and embedded systems.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="{% static 'main/images/mechanical.jpg' %}" alt="Mechanical">
+            <h2>Mechanical Engineering</h2>
+            <p>Master the art of machines, robotics, and manufacturing.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="{% static 'main/images/civil.jpg' %}" alt="Civil">
+            <h2>Civil Engineering</h2>
+            <p>Build the future with structural and architectural engineering.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="{% static 'main/images/electrical.jpg' %}" alt="EEE">
+            <h2>Electrical & Electronics Engineering</h2>
+            <p>Power up your knowledge in electrical systems and automation.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="{% static 'main/images/mba.jpg' %}" alt="MBA">
+            <h2>Master of Business Administration</h2>
+            <p>Develop leadership and management skills for a global career.</p>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.recruiters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.recruiters img {
+    width: 120px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recruiters img:hover {
+    transform: scale(1.1);
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid white;
+}
+
+table th {
+    background: yellow;
+    color: black;
+}
+
+.alumni-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.alumni-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.alumni-card:hover {
+    transform: scale(1.05);
+}
+
+.alumni-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.alumni-card h3 {
+    color: yellow;
+}
+
+.alumni-card p {
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recruiters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alumni-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - College</title>
+    <link rel="stylesheet" href="{% static 'main/css/admissions.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="fade-in">Admissions</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'administration' %}">Administration</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'departments' %}">Departments</a>
+            <a href="{% url 'placements' %}">Placements</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Welcome to Our Admissions Portal</h2>
+        <p>Explore various programs and start your journey with us.</p>
+
+        <div class="image-gallery">
+            <img src="{% static 'main/images/admission1.jpg' %}" alt="Admission Process">
+            <img src="{% static 'main/images/admission2.jpg' %}" alt="Campus Tour">
+            <img src="{% static 'main/images/admission3.jpg' %}" alt="Student Interaction">
+        </div>
+
+        <section class="courses">
+            <h2>Available Courses</h2>
+            <ul>
+                <li>Bachelor of Technology (B.Tech) - Computer Science</li>
+                <li>Bachelor of Technology (B.Tech) - Artificial Intelligence</li>
+                <li>Master of Business Administration (MBA)</li>
+                <li>Bachelor of Science (B.Sc) - Biotechnology</li>
+            </ul>
+        </section>
+
+        <section class="eligibility">
+            <h2>Eligibility Criteria</h2>
+            <p><strong>Undergraduate Programs:</strong> 10+2 with minimum 50% marks.</p>
+            <p><strong>Postgraduate Programs:</strong> Bachelor's degree with a minimum of 55% marks.</p>
+        </section>
+
+        <section class="admission-process">
+            <h2>Admission Process</h2>
+            <ol>
+                <li>Fill the online application form.</li>
+                <li>Upload required documents.</li>
+                <li>Appear for the entrance examination.</li>
+                <li>Check your results and proceed with counseling.</li>
+                <li>Confirm admission and pay the fees.</li>
+            </ol>
+        </section>
+
+        <button class="apply-button">Apply Now</button>
+    </section>
+
+</body>
+</html>
