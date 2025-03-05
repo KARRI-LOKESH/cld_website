@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Full-width College Logo */
+.im {
+    width: 80%; /* Reduced width while keeping proportions */
+    max-width: 1000px; /* Prevents it from being too large */
+    height: auto; /* Keeps the aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    margin: 10px 0;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* Navigation */
+nav {
+    background: #343a40;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+nav a:hover {
+    color: #f8d210;
+    text-shadow: 0 0 10px rgba(248, 210, 16, 0.8);
+    transform: scale(1.1);
+}
+
+/* Image Gallery */
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Ensure all images are the same size */
+.image-container img {
+    width: 300px; /* Equal width */
+    height: 200px; /* Equal height */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+/* First 3 images in a row */
+.image-container img:nth-child(-n+3) {
+    flex: 1 1 calc(33.33% - 20px);
+}
+
+/* Image Hover Effect */
+.image-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button */
+.pulse-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.pulse-button:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #212529;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Quick Links as Ordered List */
+footer ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+footer a {
+    color: #f8d210;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
