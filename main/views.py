@@ -77,7 +77,7 @@ def administration(request):
     return render(request, 'main/administration.html')
 
 def admissions(request):
-    return render(request, 'main/Admissions.html')
+    return render(request, 'main/admissions.html')
 
 def departments(request):
     return render(request, 'main/departments.html')
