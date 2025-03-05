@@ -116,7 +116,7 @@ STATIC_URL = '/static/'
 
 # Configure static files
 STATICFILES_DIRS = [
-    BASE_DIR / "main" / "static",  # Corrected path for static files
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Directory where collected static files will be stored
