@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    color: white;
+    text-align: center;
+    animation: fadeInBody 1.5s ease-in-out;
+}
+
+/* Header Animation */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    animation: slideDown 1s ease-in-out;
+}
+
+h1 {
+    font-size: 36px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Navigation Animation */
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+/* Smooth Hover Effect */
+nav a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+/* Underline Effect */
+nav a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: yellow;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Recruiters Section */
+.recruiters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Image Hover Animation */
+.recruiters img {
+    width: 120px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.recruiters img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8);
+}
+
+/* Table Animation */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid white;
+}
+
+table th {
+    background: yellow;
+    color: black;
+}
+
+/* Alumni Section */
+.alumni-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Alumni Card Hover Animation */
+.alumni-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.alumni-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.7);
+}
+
+/* Image Animation */
+.alumni-card img {
+    width: 100%;
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.alumni-card h3 {
+    color: yellow;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Button Animation */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.button:hover {
+    background: orange;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .recruiters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .alumni-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}

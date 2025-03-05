@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placements - College</title>
-    <link rel="stylesheet" href="{% static 'main/css/placements.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/placement.css' %}">
 </head>
 <body>
 
@@ -20,6 +20,8 @@
             <a href="{% url 'amenities' %}">Amenities</a>
             <a href="{% url 'activities' %}">Activities</a>
             <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'student_login' %}">Login</a>
+            <a href="{% url 'student_signup' %}">Signup</a>
         </nav>
     </header>
 
@@ -30,6 +32,9 @@
             <img src="{% static 'main/images/infosys.png' %}" alt="Infosys">
             <img src="{% static 'main/images/wipro.png' %}" alt="Wipro">
             <img src="{% static 'main/images/cognizant.png' %}" alt="Cognizant">
+            <img src="{% static 'main/images/google.png' %}" alt="Google">
+            <img src="{% static 'main/images/amazon.png' %}" alt="Amazon">
+            <img src="{% static 'main/images/microsoft.png' %}" alt="Microsoft">
         </div>
 
         <h2>Placement Statistics</h2>
@@ -64,6 +69,26 @@
             </tr>
         </table>
 
+        <h2>Internship Opportunities</h2>
+        <p>Our college collaborates with top companies to provide internship opportunities for students. These internships help students gain real-world experience, improve their skills, and increase their chances of getting placed.</p>
+        <ul>
+            <li>Google Summer of Code</li>
+            <li>Microsoft Learn Student Ambassador Program</li>
+            <li>Amazon ML Internship</li>
+            <li>TCS iON Remote Internship</li>
+            <li>Infosys InStep Internship</li>
+        </ul>
+
+        <h2>Career Guidance & Training</h2>
+        <p>We provide career counseling, resume building workshops, and mock interviews to prepare students for placement drives. Our dedicated placement cell ensures that students are industry-ready.</p>
+        <ol>
+            <li>Soft Skills & Communication Training</li>
+            <li>Aptitude & Logical Reasoning Sessions</li>
+            <li>Technical & Coding Assessments</li>
+            <li>Group Discussions & HR Interview Tips</li>
+            <li>Industry Expert Webinars</li>
+        </ol>
+
         <h2>Alumni Success Stories</h2>
         <div class="alumni-container">
             <div class="alumni-card">
@@ -77,11 +102,42 @@
                 <p>Data Scientist at Amazon</p>
             </div>
             <div class="alumni-card">
-                <img src="{% static 'main/images/abhi.jpg' %}" alt="Alumni 3">
+                <img src="{% static 'main/images/abhiii.jpg' %}" alt="Alumni 3">
                 <h3>Balla Abhishek</h3>
                 <p>Product Manager at Microsoft</p>
             </div>
+            <div class="alumni-card">
+                <img src="{% static 'main/images/dilli.jpg' %}" alt="Alumni 4">
+                <h3>Mukkalla Dilliswararao</h3>
+                <p>AI Researcher at OpenAI</p>
+            </div>
+            <div class="alumni-card">
+                <img src="{% static 'main/images/anand.jpg' %}" alt="Alumni 5">
+                <h3>Gumpa Anand</h3>
+                <p>UX Designer at Adobe</p>
+            </div>
         </div>
+
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <blockquote>
+                "The placement cell helped me secure my dream job at Google. The mock interviews and coding sessions were a game changer!"  
+                <cite>— Karri Lokesh, Software Engineer at Google</cite>
+            </blockquote>
+            <blockquote>
+                "Thanks to the career guidance program, I was able to crack Amazon's data science interview. The training sessions were very helpful."  
+                <cite>— Chinta Ganapathi, Data Scientist at Amazon</cite>
+            </blockquote>
+            <blockquote>
+                "The internship opportunities and placement training at our college made me industry-ready. Highly recommend!"  
+                <cite>— Gumpa Anand, UX Designer at Adobe</cite>
+            </blockquote>
+        </div>
+
+        <h2>Ready to Kickstart Your Career?</h2>
+        <p>Join our college and take the first step towards a successful career. Our strong industry connections, experienced faculty, and dedicated placement team will ensure you get the best opportunities.</p>
+        <a href="{% url 'admissions' %}" class="button">Apply Now</a>
+
     </section>
 
 </body>

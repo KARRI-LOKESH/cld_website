@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Website</title>
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}" />
+    <script>
+      function updateDateTime() {
+        var now = new Date();
+        var dateTimeString =
+          now.toLocaleDateString() + " " + now.toLocaleTimeString();
+        document.getElementById("date-time").innerText = dateTimeString;
+      }
+      setInterval(updateDateTime, 1000);
+    </script>
+  </head>
+  <body onload="updateDateTime()">
+    <header>
+      <img
+        src="{% static 'main/images/stt.jpg' %}"
+        alt="College Logo"
+        class="im"
+      />
+      <h1 class="fade-in">Welcome to Our College</h1>
+    </header>
+
+    <p
+      id="date-time"
+      style="font-size: 18px; text-align: center; font-weight: bold"
+    ></p>
+
+    <div class="image-container">
+      <img
+        src="{% static 'main/images/astc.jpg' %}"
+        alt="College Image"
+        class="slide-in"
+      />
+      <img
+        src="{% static 'main/images/labs.jpg' %}"
+        alt="Library Image"
+        class="slide-in"
+      />
+      <img
+        src="{% static 'main/images/avev1.jpg' %}"
+        alt="Campus Image"
+        class="slide-in"
+      />
+      <img
+        src="{% static 'main/images/avev2.jpg' %}"
+        alt="astc1"
+        class="slide-in"
+      />
+      <img
+        src="{% static 'main/images/avev3.jpg' %}"
+        alt="astc2"
+        class="slide-in"
+      />
+      <img
+        src="{% static 'main/images/astc_solar.jpg' %}"
+        alt="astc2"
+        class="slide-in"
+      />
+    </div>
+
+    <nav>
+      <a href="{% url 'administration' %}">Administration</a>
+      <a href="{% url 'admissions' %}">Admissions</a>
+      <a href="{% url 'departments' %}">Departments</a>
+      <a href="{% url 'placements' %}">Placements</a>
+      <a href="{% url 'research' %}">Research</a>
+      <a href="{% url 'amenities' %}">Amenities</a>
+      <a href="{% url 'activities' %}">Activities</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+
+    <button
+      class="pulse-button"
+      onclick="alert('Welcome to our College Website!')"
+    >
+      Click Me
+    </button>
+
+    <footer>
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="{% url 'admissions' %}">Admissions</a></li>
+        <li><a href="{% url 'placements' %}">Placements</a></li>
+        <li><a href="{% url 'departments' %}">Departments</a></li>
+        <li><a href="{% url 'research' %}">Research</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        <a href="{% url 'student_login' %}">Login</a>
+        <a href="{% url 'student_signup' %}">signup</a>
+      </ul>
+    </footer>
+  </body>
+</html>

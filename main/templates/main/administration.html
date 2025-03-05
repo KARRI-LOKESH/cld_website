@@ -33,7 +33,25 @@
             <p>HOD - Electrical & Electronic Engineering</p>
             <p>"Empowering students with knowledge and practical skills."</p>
         </section>
-    </div>
+        <section class="admin-card">
+            <img src="{% static 'main/images/cse.jpg' %}" alt="HOD">
+            <h2>Mr. M. Uma Maheswararao</h2>
+            <p>HOD - Computer Science & Engineering</p>
+            <p>"Shaping future innovators through excellence in education."</p>
+        </section>
+        <section class="admin-card">
+            <img src="{% static 'main/images/ecehod.jpg' %}" alt="HOD">
+            <h2>Mr. N. Chandra Sekhar</h2>
+            <p>HOD - Electronics & Communication Engineering</p>
+            <p>"Inspiring students to push the boundaries of technology."</p>
+        </section>
+        <section class="admin-card">
+            <img src="{% static 'main/images/aiml.jpg' %}" alt="HOD">
+            <h2>Ms. A. Krishna Veni</h2>
+            <p>HOD - Artificial Intelligence & Machine Learning</p>
+            <p>"Guiding students toward innovation and excellence in engineering."</p>
+        </section>
+        
 
     <nav>
         <a href="{% url 'index' %}">Home</a>
@@ -41,6 +59,8 @@
         <a href="{% url 'departments' %}">Departments</a>
         <a href="{% url 'placements' %}">Placements</a>
         <a href="{% url 'contact' %}">Contact Us</a>
+        <a href="{% url 'student_login' %}">Login</a>
+        <a href="{% url 'student_signup' %}">signup</a>
     </nav>
 
 </body>

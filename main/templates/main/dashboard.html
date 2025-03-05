@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/dashboard.css' %}">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>ASTC Dashboard</h2>
+        <ul>
+            <li><a href="#">🏠 Home</a></li>
+            <li><a href="#">🎓 Students</a></li>
+            <li><a href="#">📚 Courses</a></li>
+            <li><a href="#">📝 Exams</a></li>
+            <li><a href="#">💰 Fees</a></li>
+            <li><a href="#">📅 Timetable</a></li>
+            <li><a href="#">📢 Announcements</a></li>
+            <li><a href="#">📬 Notifications</a></li>
+            <li><a href="#">📊 Results</a></li>
+            <li><a href="#">📖 Assignments</a></li>
+            <li><a href="#">👩‍🏫 Faculty Contacts</a></li>
+            <li><a href="#">🎉 Events</a></li>
+        </ul>
+        <a href="{% url 'student_logout' %}"><button>Logout</button></a>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Welcome, {{ student.name }}!</h1>
+            <p>Your student dashboard overview.</p>
+        </header>
+        
+        <section class="profile">
+            <h2>Profile Information</h2>
+            <p><strong>Name:</strong> {{ student.name }}</p>
+            <p><strong>Email:</strong> {{ student.email }}</p>
+            <p><strong>Course:</strong> {{ student.course }}</p>
+        </section>
+
+        <section class="attendance">
+            <h2>Attendance</h2>
+            <p>Your current attendance: <strong>85%</strong></p>
+        </section>
+
+        <section class="results">
+            <h2>Recent Results</h2>
+            <p>Latest Exam Score: <strong>89%</strong></p>
+        </section>
+
+        <section class="assignments">
+            <h2>Assignments</h2>
+            <ul>
+                <li>Machine Learning Project - Due: 10th March</li>
+                <li>Web Development Assignment - Due: 15th March</li>
+            </ul>
+        </section>
+
+        <section class="notifications">
+            <h2>Notifications</h2>
+            <ul>
+                <li>📢 Semester exams begin from 25th March.</li>
+                <li>📢 New placement opportunities available.</li>
+            </ul>
+        </section>
+
+        <section class="faculty">
+            <h2>Faculty Contacts</h2>
+            <p>Prof. John Doe - Computer Science (john.doe@example.com)</p>
+            <p>Dr. Smith - Mathematics (smith@example.com)</p>
+        </section>
+
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <p>🎉 Hackathon - 20th March</p>
+            <p>🎊 Cultural Fest - 5th April</p>
+        </section>
+    </div>
+</body>
+</html>

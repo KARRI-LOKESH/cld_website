@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admissions - College</title>
-    <link rel="stylesheet" href="{% static 'main/css/admissions.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/st_admissions.css' %}">
 </head>
 <body>
 
@@ -18,6 +18,8 @@
             <a href="{% url 'departments' %}">Departments</a>
             <a href="{% url 'placements' %}">Placements</a>
             <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'student_login' %}">Login</a>
+            <a href="{% url 'student_signup' %}">Signup</a>
         </nav>
     </header>
 
@@ -43,7 +45,7 @@
 
         <section class="eligibility">
             <h2>Eligibility Criteria</h2>
-            <p><strong>Undergraduate Programs:</strong> 10+2 with minimum 50% marks.</p>
+            <p><strong>Undergraduate Programs:</strong> 10+2 with a minimum of 50% marks.</p>
             <p><strong>Postgraduate Programs:</strong> Bachelor's degree with a minimum of 55% marks.</p>
         </section>
 
@@ -56,6 +58,41 @@
                 <li>Check your results and proceed with counseling.</li>
                 <li>Confirm admission and pay the fees.</li>
             </ol>
+        </section>
+
+        <section class="scholarships">
+            <h2>Scholarships & Financial Aid</h2>
+            <p>We offer various scholarships and financial aid programs for deserving students:</p>
+            <ul>
+                <li>Merit-based scholarships for top-performing students.</li>
+                <li>Need-based financial aid for economically weaker sections.</li>
+                <li>Government-funded scholarships for eligible candidates.</li>
+                <li>Special scholarships for female students and differently-abled students.</li>
+            </ul>
+        </section>
+
+        <section class="facilities">
+            <h2>Campus Facilities</h2>
+            <p>Our campus is equipped with state-of-the-art facilities to enhance student learning:</p>
+            <ul>
+                <li>Modern classrooms with smart technology.</li>
+                <li>Fully equipped laboratories for hands-on learning.</li>
+                <li>Library with a vast collection of books and online resources.</li>
+                <li>Sports complex and recreational areas.</li>
+                <li>Hostel accommodation with high-speed internet and security.</li>
+            </ul>
+        </section>
+        
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Admission Office:</strong></p>
+            <p>Email:<a href="mailto:sttheressa99@gmail.com">sttheressa99@gmail.com</a></p>
+            <h2>Phone</h2>
+            <p>+91-9704755549, 7893433345</p>
+            <p>+91-08952-281062, 281061</p>
+            <h2>Our Address</h2>
+            <p>Garividi (Cheepurupalli), Vizianagaram District, Andhra Pradesh, India.</p>
         </section>
 
         <button class="apply-button">Apply Now</button>
